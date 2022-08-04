@@ -4,10 +4,14 @@ server:
 logging:
   level:
     root: INFO
-    org.springframework.web: DEBUG
-    org.springframework.security: TRACE
-    org.springframework.boot.autoconfigure: INFO
-    org.springframework.web.client.RestTemplate: DEBUG
+    org:
+      springframework:
+        web: debug
+        client:
+          RestTemplate: debug
+        security: trace
+        boot:
+          autoconfigure: debug
 
 spring:
   security:
