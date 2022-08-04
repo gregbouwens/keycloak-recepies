@@ -38,6 +38,8 @@ Build and Run the springboot-oauth-bearer
 Test application
 -----------------
 
+docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -p 9090:8080 jboss/keycloak
+
 ## To Get the Token
 
 curl -X POST 'http://localhost:9090/auth/realms/springboot/protocol/openid-connect/token' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'client_id=demoapp' --data-urlencode 'username=testuser' --data-urlencode 'password=test123' --data-urlencode 'grant_type=password'  
